@@ -3,12 +3,12 @@ import { useRouter } from "next/router";
 import Header from "../components/Header";
 import SearchResults from "../components/SearchResults";
 import { API_KEY, CONTEXT_KEY } from "../keys";
-import Response from "../Repsonse";
+import Response from "../Response";
 
 function Search({ results }) {
   const router = useRouter();
 
-  console.log(results);
+  // console.log(results);
   return (
     <div>
       <Head>
@@ -28,7 +28,7 @@ function Search({ results }) {
 export default Search;
 
 export async function getServerSideProps(context) {
-  const useDummyData = true;
+  const useDummyData = false;
   const startIndex = context.query.start || "0";
 
   const data = useDummyData
