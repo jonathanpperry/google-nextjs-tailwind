@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import { useRef } from "react";
 import { MicrophoneIcon, SearchIcon, XIcon } from "@heroicons/react/solid";
 import Avatar from "./Avatar";
+import HeaderOptions from "./HeaderOptions";
 
 function Header() {
   const router = useRouter();
@@ -47,7 +48,7 @@ function Header() {
       </div>
 
       {/* Header Options */}
-      
+      <HeaderOptions />
     </header>
   );
 }
